@@ -2,14 +2,14 @@ import { client, connection } from './main';
 
 let sentNotification = false;
 
-export async function consultDeadlines() {  
-  const data = await connection.query<{ id: string, acionamentos: string, prazo_licenciamentos: string }[]>('SELECT id, acionamentos, prazo_licenciamentos FROM "Project"');
-  
-  const date = new Date();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-
+export async function consultDeadlines() { 
   if (!sentNotification) {
+    const data = await connection.query<{ id: string, acionamentos: string, prazo_licenciamentos: string }[]>('SELECT id, acionamentos, prazo_licenciamentos FROM "Project"');
+  
+    const date = new Date();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
     if (day % 2 === 0) {
       const projectsToProtocol: string[] = []
       
@@ -37,12 +37,16 @@ export async function consultDeadlines() {
       sentNotification = false;
     }
   } else {
-    consultDeadlines();
+    setTimeout(() => {
+      consultDeadlines();
+    }, 1000 * 60 * 60 * 12) // 12 hours
   }
 
-  if (day % 2 !== 0) {
+  if (new Date().getDate() % 2 !== 0) {
     sentNotification = false;
   }
 
-  consultDeadlines();
+  setTimeout(() => {
+    consultDeadlines();
+  }, 1000 * 60 * 60 * 12) // 12 hours
 }
