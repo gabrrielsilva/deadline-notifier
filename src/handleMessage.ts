@@ -11,8 +11,6 @@ export async function handleMessage(message: WAWebJS.Message) {
     getProtocolDeadline(projectId);
   } else if (message.body === '!prazos') {
     await consultDeadlines();
-  } else if (message.body === '!chatId') {
-    client.sendMessage(process.env.CHAT_ID_PROTOCOLOS_INFINITEL, `Chat ID = ${(await message.getChat()).id}`);
   } else if (message.body.startsWith('!')) {
     client.sendMessage(process.env.CHAT_ID_PROTOCOLOS_INFINITEL, '*Bot:* Não conheço esse comando 🤔');
   }
