@@ -34,4 +34,3 @@ client.on('ready', async () => {
 client.initialize();
 
 export { connection, client };
-
