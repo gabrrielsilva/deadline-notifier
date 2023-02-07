@@ -12,11 +12,24 @@ const client = new Client({
   }
 });
 
+const date = new Date();
+const day = date.getDate();
+let sendNotification = false;
+
 client.on('qr', qr => qrCode.generate(qr, { small: true }));
 client.on('ready', async () => {
   console.log('Client is ready!')
-  await import('./checkIncomingMessageChatId')
-  consultDeadlines();
+  await import('./checkIncomingMessageChatId');
+
+  if (day % 2 === 0 && !sendNotification) {
+    sendNotification = true;
+    consultDeadlines();
+  } else if (day % 2 !== 0) {
+    sendNotification = false;
+    return;
+  }
+
+  return;
 });
 client.initialize();
 
