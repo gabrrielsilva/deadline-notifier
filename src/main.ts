@@ -14,30 +14,34 @@ const client = new Client({
 
 const date = new Date();
 const day = date.getDate();
+let sendNotification = false;
 
 client.on('qr', qr => qrCode.generate(qr, { small: true }));
 client.on('ready', async () => {
   console.log('Client is ready!');
   await import('./checkIncomingMessageChatId');
-  // verifyPeriod();
-});
-client.initialize();
 
-let sendNotification = false;
-function verifyPeriod() {
-  if (day % 2 === 0 && !sendNotification) {
-    sendNotification = true;
-    consultDeadlines();
-    verifyPeriod();
-  } else if (day % 2 !== 0) {
-    sendNotification = false;
+  function verifyPeriod() {
+    if (day % 2 === 0 && !sendNotification) {
+      sendNotification = true;
+      consultDeadlines();
+      verifyPeriod();
+    } else if (day % 2 !== 0) {
+      sendNotification = false;
+      setTimeout(() => {
+        verifyPeriod();
+      }, 1000 * 60 * 60 * 8);
+    }
+    
     setTimeout(() => {
       verifyPeriod();
     }, 1000 * 60 * 60 * 8);
-  }
+  };
 
   verifyPeriod();
-};
+});
+client.initialize();
+
 
 export { connection, client };
 
