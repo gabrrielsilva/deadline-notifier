@@ -32,12 +32,10 @@ client.on('ready', async () => {
         verifyPeriod();
       }, 1000 * 60 * 60 * 8);
     }
-    
     setTimeout(() => {
       verifyPeriod();
     }, 1000 * 60 * 60 * 8);
   };
-
   verifyPeriod();
 });
 client.initialize();
