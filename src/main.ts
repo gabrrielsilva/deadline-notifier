@@ -34,7 +34,4 @@ function verifyPeriod() {
   }
 };
 
-verifyPeriod();
-
 export { connection, client };
-
