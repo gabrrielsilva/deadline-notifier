@@ -28,10 +28,16 @@ function verifyPeriod() {
   if (day % 2 === 0 && !sendNotification) {
     sendNotification = true;
     consultDeadlines();
+    verifyPeriod();
   } else if (day % 2 !== 0) {
     sendNotification = false;
-    verifyPeriod();
+    setTimeout(() => {
+      verifyPeriod();
+    }, 1000 * 60 * 60 * 8);
   }
+
+  verifyPeriod();
 };
 
 export { connection, client };
+
