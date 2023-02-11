@@ -21,16 +21,21 @@ client.on('ready', async () => {
   console.log('Client is ready!')
   await import('./checkIncomingMessageChatId');
 
-  if (day % 2 === 0 && !sendNotification) {
-    sendNotification = true;
-    consultDeadlines();
-  } else if (day % 2 !== 0) {
-    sendNotification = false;
-    return;
-  }
+  function verifyPeriod() {
+    if (day % 2 === 0 && !sendNotification) {
+      sendNotification = true;
+      consultDeadlines();
+    } else if (day % 2 !== 0) {
+      sendNotification = false;
+      verifyPeriod();
+    }
+  
+    verifyPeriod();
+  };
 
-  return;
+  verifyPeriod();
 });
 client.initialize();
 
 export { connection, client };
+
