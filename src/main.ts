@@ -9,7 +9,7 @@ const connection = pgp()(process.env.DATABASE_URL);
 const client = new Client({
   puppeteer: {
     args: ['--no-sandbox','--disable-setuid-sandbox']
-  }
+  },
 });
 
 const date = new Date();
@@ -19,7 +19,7 @@ client.on('qr', qr => qrCode.generate(qr, { small: true }));
 client.on('ready', async () => {
   console.log('Client is ready!');
   await import('./checkIncomingMessageChatId');
-  verifyPeriod();
+  // verifyPeriod();
 });
 client.initialize();
 
