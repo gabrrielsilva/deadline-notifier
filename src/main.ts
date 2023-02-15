@@ -17,7 +17,7 @@ const day = date.getDate();
 let sendNotification = false;
 
 client.on('qr', qr => qrCode.generate(qr, { small: true }));
-client.on('ready', async () => {
+client.on('ready', async () => { 
   console.log('Client is ready!');
   await import('./checkIncomingMessageChatId');
 
