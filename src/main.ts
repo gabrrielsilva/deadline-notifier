@@ -13,8 +13,8 @@ const client = new Client({
 });
 
 const date = new Date();
-const day = date.getDate();
-let sendNotification = false;
+// const day = date.getDate();
+// let sendNotification = false;
 
 client.on('qr', qr => qrCode.generate(qr, { small: true }));
 client.on('ready', async () => { 
@@ -22,19 +22,23 @@ client.on('ready', async () => {
   await import('./checkIncomingMessageChatId');
 
   function verifyPeriod() {
-    if (day % 2 === 0 && !sendNotification) {
-      sendNotification = true;
-      consultDeadlines();
-      verifyPeriod();
-    } else if (day % 2 !== 0) {
-      sendNotification = false;
-      setTimeout(() => {
-        verifyPeriod();
-      }, 1000 * 60 * 60 * 8);
-    }
+    consultDeadlines();
     setTimeout(() => {
       verifyPeriod();
-    }, 1000 * 60 * 60 * 8);
+    }, 1000 * 60 * 60 * 12);
+    // if (day % 2 === 0 && !sendNotification) {
+    //   sendNotification = true;
+    //   consultDeadlines();
+    //   verifyPeriod();
+    // } else if (day % 2 !== 0) {
+    //   sendNotification = false;
+    //   setTimeout(() => {
+    //     verifyPeriod();
+    //   }, 1000 * 60 * 60 * 8);
+    // }
+    // setTimeout(() => {
+    //   verifyPeriod();
+    // }, 1000 * 60 * 60 * 8);
   };
   verifyPeriod();
 });
