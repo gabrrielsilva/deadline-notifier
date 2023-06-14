@@ -1,0 +1,20 @@
+2023/06/04-13:07:29.397 3e1c Reusing MANIFEST D:\development\projects\facebook-scraper\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/06/04-13:07:29.400 3e1c Recovering log #1830
+2023/06/04-13:07:29.728 3e1c Reusing old log D:\development\projects\facebook-scraper\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001830.log 
+2023/06/04-13:07:45.025 3d9c Level-0 table #1852: started
+2023/06/04-13:07:45.272 3d9c Level-0 table #1852: 1071471 bytes OK
+2023/06/04-13:07:45.335 3d9c Delete type=0 #1830
+2023/06/04-13:07:46.528 3d9c Compacting 1@0 + 0@1 files
+2023/06/04-13:07:46.734 3d9c Generated table #1853@0: 20894 keys, 213408 bytes
+2023/06/04-13:07:46.913 3d9c Generated table #1854@0: 13910 keys, 374054 bytes
+2023/06/04-13:07:46.998 3d9c Generated table #1855@0: 2169 keys, 48090 bytes
+2023/06/04-13:07:46.998 3d9c Compacted 1@0 + 0@1 files => 635552 bytes
+2023/06/04-13:07:47.044 3d9c compacted to: files[ 0 3 37 0 0 0 0 ]
+2023/06/04-13:07:47.044 3d9c Delete type=2 #1852
+2023/06/04-13:08:24.558 3e1c Compacting 1@1 + 1@2 files
+2023/06/04-13:08:24.878 3e1c Generated table #1856@1: 20993 keys, 2194132 bytes
+2023/06/04-13:08:25.027 3e1c Generated table #1857@1: 38 keys, 28248 bytes
+2023/06/04-13:08:25.027 3e1c Compacted 1@1 + 1@2 files => 2222380 bytes
+2023/06/04-13:08:25.108 3e1c compacted to: files[ 0 2 38 0 0 0 0 ]
+2023/06/04-13:08:25.109 3e1c Delete type=2 #1848
+2023/06/04-13:08:25.109 3e1c Delete type=2 #1853

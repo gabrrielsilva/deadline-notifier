@@ -1,0 +1,37 @@
+2023/06/04-13:14:00.940 396c Reusing MANIFEST D:\development\projects\facebook-scraper\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/06/04-13:14:00.994 396c Recovering log #1851
+2023/06/04-13:14:00.997 396c Reusing old log D:\development\projects\facebook-scraper\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001851.log 
+2023/06/04-13:14:16.698 3e8c Compacting 1@1 + 10@2 files
+2023/06/04-13:14:16.954 3e8c Generated table #1859@1: 21929 keys, 2194315 bytes
+2023/06/04-13:14:17.187 3e8c Generated table #1860@1: 7289 keys, 2129300 bytes
+2023/06/04-13:14:17.329 3e8c Generated table #1861@1: 8208 keys, 2131016 bytes
+2023/06/04-13:14:17.603 3e8c Generated table #1862@1: 56196 keys, 2193616 bytes
+2023/06/04-13:14:18.070 3e8c Generated table #1863@1: 104543 keys, 2256228 bytes
+2023/06/04-13:14:18.338 3e8c Generated table #1864@1: 100441 keys, 2248874 bytes
+2023/06/04-13:14:18.607 3e8c Generated table #1865@1: 98854 keys, 2248928 bytes
+2023/06/04-13:14:18.902 3e8c Generated table #1866@1: 99162 keys, 2249127 bytes
+2023/06/04-13:14:19.174 3e8c Generated table #1867@1: 99553 keys, 2249907 bytes
+2023/06/04-13:14:19.505 3e8c Generated table #1868@1: 98435 keys, 2246784 bytes
+2023/06/04-13:14:19.678 3e8c Generated table #1869@1: 14880 keys, 334604 bytes
+2023/06/04-13:14:19.678 3e8c Compacted 1@1 + 10@2 files => 22482699 bytes
+2023/06/04-13:14:19.721 3e8c compacted to: files[ 0 1 39 0 0 0 0 ]
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1835
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1836
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1837
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1838
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1839
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1840
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1841
+2023/06/04-13:14:19.722 3e8c Delete type=2 #1842
+2023/06/04-13:14:19.723 3e8c Delete type=2 #1843
+2023/06/04-13:14:19.723 3e8c Delete type=2 #1844
+2023/06/04-13:14:19.723 3e8c Delete type=2 #1854
+2023/06/04-13:15:26.222 3e8c Compacting 1@1 + 3@2 files
+2023/06/04-13:15:26.562 3e8c Generated table #1870@1: 99421 keys, 2247591 bytes
+2023/06/04-13:15:26.726 3e8c Generated table #1871@1: 37056 keys, 817179 bytes
+2023/06/04-13:15:26.726 3e8c Compacted 1@1 + 3@2 files => 3064770 bytes
+2023/06/04-13:15:26.806 3e8c compacted to: files[ 0 0 38 0 0 0 0 ]
+2023/06/04-13:15:26.807 3e8c Delete type=2 #1845
+2023/06/04-13:15:26.807 3e8c Delete type=2 #1846
+2023/06/04-13:15:26.807 3e8c Delete type=2 #1847
+2023/06/04-13:15:26.807 3e8c Delete type=2 #1855
